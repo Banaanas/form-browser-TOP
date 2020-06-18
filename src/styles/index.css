@@ -1,0 +1,161 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00897b;
+}
+
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+    }
+}
+
+h1 {
+    width: 100%;
+    margin: 0 !important;
+    padding: 1rem;
+    color: #e0f2f1;
+    font-size: 3.8rem !important; /* normalize.css is applied to h1 */
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #005b4f;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        margin: 4rem 0 !important;
+        padding: 2rem;
+        font-size: 4.5rem !important; /* normalize.css is applied to h1 */
+        text-align: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+@media (min-width: 600px) {
+    form {
+        width: 50%;
+    }
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+/* Label - Inputs */
+
+label {
+    align-self: flex-start;
+}
+
+input {
+    align-self: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 7px;
+}
+
+@media (min-width: 600px) {
+    input {
+        align-self: flex-end;
+        width: 90%;
+    }
+}
+
+#last-name,
+#country,
+#password {
+    margin-bottom: 1rem;
+}
+
+input:invalid {
+    background-color: #fdd;
+    border-color: #900;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+
+/* Button */
+
+button {
+    align-self: center;
+    width: auto;
+    padding: 0.5rem 1rem;
+    color: #e0f2f1;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: #005b4f;
+    border: #e0f2f1 3px solid;
+    border-radius: 10px;
+    outline: none;
+    transition: 1s;
+}
+
+button:hover {
+    color: #005b4f;
+    background-color: #e0f2f1;
+    border: #005b4f 3px solid;
+}
+
+/* Horizontal Rules */
+
+hr {
+    width: 25%;
+    height: 2px !important;
+    color: #4ebaaa;
+    text-align: center;
+    background-color: #4ebaaa;
+}
+
+/* Error Message */
+
+#errors-div {
+    display: none;
+    padding: 1rem;
+    color: #d32f2f;
+    font-weight: bolder;
+
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #005b4f;
+    border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+    #errors-div {
+        padding: 2rem;
+    }
+}
