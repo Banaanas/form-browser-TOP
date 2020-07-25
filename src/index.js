@@ -1,4 +1,3 @@
-// Delete the stylesheet we don"t use
 import "./styles/index.css";
 import "./styles/normalize.css";
 

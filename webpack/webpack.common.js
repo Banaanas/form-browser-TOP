@@ -1,7 +1,7 @@
-const paths = require("./paths");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const paths = require("./paths");
 
 module.exports = {
   /**
@@ -10,7 +10,7 @@ module.exports = {
    * The first place Webpack looks to start building the bundle.
    */
 
-  entry: [paths.src + "/index.js"],
+  entry: [`${paths.src}/index.js`],
 
   /**
    * Output
@@ -20,7 +20,7 @@ module.exports = {
   output: {
     path: paths.build,
     filename: "[name].bundle.js",
-    //publicPath: "",
+    // publicPath: "",
   },
 
   /**
@@ -56,8 +56,8 @@ module.exports = {
      */
     new HtmlWebpackPlugin({
       title: "Projet - Développement",
-      favicon: paths.static + "/favicon.png",
-      template: paths.src + "/template.html", // template file
+      favicon: `${paths.static}/favicon.svg`,
+      template: `${paths.src}/template.html`, // template file
       filename: "index.html", // output file
     }),
   ],
@@ -89,9 +89,21 @@ module.exports = {
         test: /\.(scss|css)$/,
         use: [
           "style-loader",
-          { loader: "css-loader", options: { sourceMap: true, importLoaders: 1 } },
-          { loader: "postcss-loader", options: { sourceMap: true } },
-          { loader: "sass-loader", options: { sourceMap: true } },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: { sourceMap: true },
+          },
+          {
+            loader: "sass-loader",
+            options: { sourceMap: true },
+          },
         ],
       },
 
@@ -99,12 +111,12 @@ module.exports = {
        * Images
        *
        * Load the images through the HTML file
-       * 
+       *
        * Copy image files to build folder.
        */
       {
         test: /\.html$/i,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
 
       {
@@ -115,7 +127,6 @@ module.exports = {
           context: "src", // prevent display of src/ in filename
         },
       },
-
 
       /**
        * Fonts
@@ -133,4 +144,4 @@ module.exports = {
       },
     ],
   },
-}
+};
