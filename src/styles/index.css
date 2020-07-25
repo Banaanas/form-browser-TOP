@@ -75,6 +75,7 @@ label {
     align-self: flex-start;
 }
 
+
 input {
     align-self: center;
     width: 100%;
@@ -82,6 +83,12 @@ input {
     padding: 0.2rem 0.5rem;
     border-radius: 7px;
 }
+
+input::placeholder {
+    font-style: italic;
+    text-align: center;
+}
+
 
 @media (min-width: 600px) {
     input {

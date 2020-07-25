@@ -26,16 +26,16 @@
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://banaanas.github.io/battleship-TOP/">
+    <a href="https://banaanas.github.io/form-browser-TOP/">
         <img src="./src/images/README/project-logo.svg" alt="Project's Logo" width="80" height="80">
     </a>
 </p>
 
-<h1 align="center">:medal_military: Battleship :bomb:</h1>
+<h1 align="center">:information_source: Form Browser :email:</h1>
 
 <p align="center">
-    Nice and funny BattleShip Game.<br/><br/>
-    <a href="https://banaanas.github.io/battleship-TOP/">:computer: Live Demo :eyes:</a><br/><br/>
+    Functional and sophisticated Browser Form.<br/><br/>
+    <a href="https://banaanas.github.io/form-browser-TOP/">:computer: Live Demo :eyes:</a><br/><br/>
 </p>
 
 
@@ -55,26 +55,27 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
-Battleship Game achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/battleship">The Odin Project - JavaScript curriculum</a>.
-One important 
+Browser Form achieved as part of <a href="https://www.theodinproject.com/courses/javascript/lessons/forms-javascript">The Odin Project - JavaScript curriculum</a>.
 
 <p align="center">
-  <a href="https://banaanas.github.io/battleship-TOP/">
+  <a href="https://banaanas.github.io/form-browser-TOP/">
     <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="300">
   </a>
 </p>
 
 
 #### Principal Features
-- Human Player vs. Computer Player ;
-- Manual ship placement (Human Player) ;
-- Random ship placement (Computer Player) ;
-- Great User Interface ;
+- Collect Last Name, First Name,Country, Zip Code, Email, Password and Password Confirmation fields ;
+- Client-side form validation ;
+- Customized error messages
 - Responsive design.
 
 <p align="center">
-  <a href="https://banaanas.github.io/battleship-TOP/">
+  <a href="https://banaanas.github.io/form-browser-TOP/">
     <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="240" height="500">
+  </a>
+  <a href="https://banaanas.github.io/form-browser-TOP/">
+    <img src="src/images/README/screenshot-3.png" alt="Screenshot" width="240" height="500">
   </a>
 </p>
 
@@ -82,13 +83,13 @@ One important
 
 - [Vanilla JavaScript](http://vanilla-js.com/)
 
-ES6 - Factory Functions - Random Ship Placement algorithm - Async / Await
+ES6 - Dynamic Rendering - JavaScript / Constraint Validation API
 
 Test-Driven Development (TDD) - Jest
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
-Grid - Flexbox - Media Queries
+Flexbox - Media Queries
 
 - [Jest](https://jestjs.io/)
 - [Webpack](https://webpack.js.org/)
@@ -149,7 +150,7 @@ Distributed under the MIT License. See <a href="./LICENCE.txt">`LICENSE`</a> for
 
 Cyrilo - [Personal Website](https://yetToCome) - cyrildeveloppeur@gmail.com
 
-Project Link: [https://github.com/Banaanas/battleship-TOP](https://github.com/Banaanas/battleship-TOP)
+Project Link: [https://github.com/Banaanas/form-browser-TOP](https://github.com/Banaanas/form-browser-TOP)
 
 
 <!-- ACKNOWLEDGEMENTS -->
