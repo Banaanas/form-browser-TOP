@@ -59,7 +59,7 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/courses
 
 <p align="center">
   <a href="https://banaanas.github.io/form-browser-TOP/">
-    <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="455" height="330">
+    <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="400" height="330">
   </a>
 </p>
 
