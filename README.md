@@ -31,7 +31,7 @@
     </a>
 </p>
 
-<h1 align="center">:information_source: Form Browser :email:</h1>
+<h1 align="center">:information_source: Form Browser :mailbox:</h1>
 
 <p align="center">
     Functional and sophisticated Browser Form.<br/><br/>
