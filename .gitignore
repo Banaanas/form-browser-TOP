@@ -4,5 +4,4 @@
 # Use https://www.gitignore.io/ to be more accurate
 
 node_modules/
-dist/
 .idea
