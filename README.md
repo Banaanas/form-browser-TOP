@@ -59,7 +59,7 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
 
 <p align="center">
   <a href="https://banaanas.github.io/form-browser-TOP/">
-    <img src="src/images/README/screenshot-1.png" alt="Screenshot" width="400" height="330">
+    <img src="src/images/README/animated-gif-1.gif" alt="Animated Gif" width="400" height="330">
   </a>
 </p>
 
@@ -72,11 +72,9 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
 
 <p align="center">
   <a href="https://banaanas.github.io/form-browser-TOP/">
-    <img src="src/images/README/screenshot-2.png" alt="Screenshot" width="240" height="420">
+    <img src="src/images/README/animated-gif-2.gif" alt="Animated Gif" width="240" height="400">
   </a>
-  <a href="https://banaanas.github.io/form-browser-TOP/">
-    <img src="src/images/README/screenshot-3.png" alt="Screenshot" width="240" height="420">
-  </a>
+  
 </p>
 
 #### Built With
