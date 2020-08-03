@@ -83,13 +83,11 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
 
 ES6 - Dynamic Rendering - JavaScript / Constraint Validation API
 
-Test-Driven Development (TDD) - Jest
 - [HTML5](https://www.w3.org/html/)
 - [CSS3](https://www.w3.org/Style/CSS/Overview.html)
 
 Flexbox - Media Queries
 
-- [Jest](https://jestjs.io/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [core-js](https://github.com/zloirock/core-js)
