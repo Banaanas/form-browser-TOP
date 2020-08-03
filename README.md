@@ -55,7 +55,7 @@
 <!-- TABLE OF CONTENTS -->
 
 ## About the Project
-Browser Form achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript curriculum</a>.
+Browser Form achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript Curriculum</a>.
 
 <p align="center">
   <a href="https://banaanas.github.io/form-browser-TOP/">
