@@ -1,129 +1,78 @@
+const paths = require("./paths");
+
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const paths = require("./paths");
 
 module.exports = {
-  /**
-   * Entry
-   *
-   * The first place Webpack looks to start building the bundle.
-   */
+  // Where webpack looks to start building the bundle
+  entry: [paths.src + "/index.js"],
 
-  entry: [`${paths.src}/index.js`],
-
-  /**
-   * Output
-   *
-   * Where Webpack outputs the assets and bundles.
-   */
+  // Where webpack outputs the assets and bundles
   output: {
     path: paths.build,
     filename: "[name].bundle.js",
-    // publicPath: "",
+    publicPath: "/",
   },
 
-  /**
-   * Plugins
-   *
-   * Customize the Webpack build process.
-   */
+  // Customize the webpack build process
   plugins: [
-    /**
-     * CleanWebpackPlugin
-     *
-     * Removes/cleans build folders and unused assets when rebuilding.
-     */
+    // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
-    /**
-     * CopyWebpackPlugin
-     *
-     * Copies files from target to destination folder.
-     */
-    new CopyWebpackPlugin([
-      {
-        from: paths.static,
-        to: "assets",
-        ignore: ["*.DS_Store"],
-      },
-    ]),
+    // Copies files from target to destination folder
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: paths.public,
+          to: "assets",
+          globOptions: {
+            ignore: ["*.DS_Store"],
+          },
+        },
+      ],
+    }),
 
-    /**
-     * HtmlWebpackPlugin
-     *
-     * Generates an HTML file from a template.
-     */
+    // Generates an HTML file from a template
+    // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: "Projet - Développement",
-      favicon: `${paths.static}/favicon.svg`,
-      template: `${paths.src}/template.html`, // template file
+      title: "development-project",
+      favicon: paths.src + "/images/favicon.ico",
+      template: paths.src + "/template.html", // template file
       filename: "index.html", // output file
     }),
   ],
 
-  /**
-   * Module
-   *
-   * Determine how modules within the project are treated.
-   */
+  // Determine how modules within the project are treated
   module: {
     rules: [
-      /**
-       * JavaScript
-       *
-       * Use Babel to transpile JavaScript files.
-       */
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ["babel-loader", "eslint-loader"],
-      },
+      // JavaScript: Use Babel to transpile JavaScript files
+      { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
 
-      /**
-       * Styles
-       *
-       * Inject CSS into the head with source maps.
-       */
+      // Styles: Inject CSS into the head with source maps
       {
         test: /\.(scss|css)$/,
         use: [
           "style-loader",
           {
             loader: "css-loader",
-            options: {
-              sourceMap: true,
-              importLoaders: 1,
-            },
+            options: { sourceMap: true, importLoaders: 1 },
           },
-          {
-            loader: "postcss-loader",
-            options: { sourceMap: true },
-          },
-          {
-            loader: "sass-loader",
-            options: { sourceMap: true },
-          },
+          { loader: "postcss-loader", options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } },
         ],
       },
 
       /**
        * Images
        *
-       * Load the images through the HTML file
-       *
        * Copy image files to build folder.
        */
-      {
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
         loader: "file-loader",
         options: {
-          name: "[path][name].[ext]",
+          name: "[path][name].[hash].[ext]",
           context: "src", // prevent display of src/ in filename
         },
       },
@@ -138,7 +87,7 @@ module.exports = {
         loader: "url-loader",
         options: {
           limit: 8192,
-          name: "[path][name].[ext]",
+          name: "[path][name].[hash].[ext]",
           context: "src", // prevent display of src/ in filename
         },
       },
