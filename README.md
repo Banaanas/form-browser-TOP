@@ -68,7 +68,7 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
 - Collect Last Name, First Name,Country, Zip Code, Email, Password and Password Confirmation fields ;
 - Client-side form validation ;
 - Customized error messages
-- Responsive design.
+- Responsive Design.
 
 <p align="center">
   <a href="https://form-browser.cyrilo.app/">
