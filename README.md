@@ -52,7 +52,8 @@
 - [License](#license)
 - [Contact](#contact)
 
-<!-- TABLE OF CONTENTS -->
+
+<!-- ABOUT THE PROJECT -->
 
 ## About the Project
 Browser Form achieved as part of <a href="https://www.theodinproject.com/">The Odin Project - JavaScript Curriculum</a>.
@@ -63,6 +64,8 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
   </a>
 </p>
 
+
+<!-- PRINCIPAL FEATURES -->
 
 #### Principal Features
 - Collect Last Name, First Name,Country, Zip Code, Email, Password and Password Confirmation fields ;
@@ -76,6 +79,9 @@ Browser Form achieved as part of <a href="https://www.theodinproject.com/">The O
   </a>
   
 </p>
+
+
+<!-- BUILT WITH -->
 
 #### Built With
 
