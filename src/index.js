@@ -64,8 +64,8 @@ function showError(eventTargetID) {
     if (zipCode.validity.valueMissing) {
       errorsDiv.textContent = "You need to enter your Zip Code";
     } else if (
-      zipCode.validity.rangeUnderflow
-      || zipCode.validity.rangeOverflow
+      zipCode.validity.rangeUnderflow ||
+      zipCode.validity.rangeOverflow
     ) {
       errorsDiv.textContent = "Zip-Code must be 5 numbers long";
     } else if (zipCode.validity.valid) {
@@ -124,8 +124,8 @@ allLabels.forEach((item) => {
     }
 
     if (
-      eventTargetID === "confirm-password"
-      && !confirmPassword.validity.tooShort
+      eventTargetID === "confirm-password" &&
+      !confirmPassword.validity.tooShort
     ) {
       if (confirmPassword.value !== password.value) {
         errorsDiv.textContent = "Passwords don't match";
@@ -140,14 +140,14 @@ allLabels.forEach((item) => {
     // Each time the user types something, check if the
     // form fields are valid.
     if (
-      lastName.validity.valid
-      && firstName.validity.valid
-      && country.validity.valid
-      && zipCode.validity.valid
-      && eMail.validity.valid
-      && password.validity.valid
-      && confirmPassword.validity.valid
-      && confirmPassword.value === password.value
+      lastName.validity.valid &&
+      firstName.validity.valid &&
+      country.validity.valid &&
+      zipCode.validity.valid &&
+      eMail.validity.valid &&
+      password.validity.valid &&
+      confirmPassword.validity.valid &&
+      confirmPassword.value === password.value
     ) {
       errorsDiv.innerHTML = ""; // Reset the content of the message
       errorsDiv.textContent = "You can submit your form";
@@ -202,14 +202,14 @@ allLabels.forEach((item) => {
 allLabels.forEach((item) => {
   item.addEventListener("keyup", () => {
     if (
-      lastName.validity.valid
-      && firstName.validity.valid
-      && country.validity.valid
-      && zipCode.validity.valid
-      && eMail.validity.valid
-      && password.validity.valid
-      && confirmPassword.validity.valid
-      && confirmPassword.value === password.value
+      lastName.validity.valid &&
+      firstName.validity.valid &&
+      country.validity.valid &&
+      zipCode.validity.valid &&
+      eMail.validity.valid &&
+      password.validity.valid &&
+      confirmPassword.validity.valid &&
+      confirmPassword.value === password.value
     ) {
       // In case there is an error message visible, if the field
       // is valid, remove the error message.
@@ -227,8 +227,8 @@ submitForm.addEventListener("submit", (event) => {
   if (submitForm.checkValidity() && confirmPassword.value === password.value) {
     errorsDiv.innerHTML = " &#128526; You are the best ! &#128540;";
   } else if (
-    !submitForm.checkValidity()
-    && confirmPassword.value !== password.value
+    !submitForm.checkValidity() &&
+    confirmPassword.value !== password.value
   ) {
     // If there is still an error, show the correct error
     errorsDiv.innerHTML = "Passwords don't match";
